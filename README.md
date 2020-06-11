@@ -17,7 +17,3 @@
 > `;
 
 4.app.js的所有链接均连接仓库中的文件
-
-
-# 预览
-[Demo](https://oss.sunpma.com)
