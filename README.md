@@ -15,6 +15,3 @@
 > ......
 > 
 > `;
-# 演示
-
-[Demo](https://oss.sunpma.com)
