@@ -323,11 +323,6 @@ function file_video(path) {
 	  <label class="mdui-textfield-label">引用地址</label>
 	  <textarea rows="0" class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
 	</div>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label mdui-m-b-3">播放地址</label>
-      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="videoPlay('${url}','mp4');">MP4</button>
-      <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" onclick="videoPlay('${url}','hls');">HLS</button>
-	</div>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
@@ -450,12 +445,12 @@ function utc2beijing(utc_datetime) {
 
 // bytes自适应转换到KB,MB,GB
 function formatFileSize(bytes) {
-  if (bytes >= 1000000000) {
-    bytes = (bytes / 1000000000).toFixed(2) + " GB";
-  } else if (bytes >= 1000000) {
-    bytes = (bytes / 1000000).toFixed(2) + " MB";
-  } else if (bytes >= 1000) {
-    bytes = (bytes / 1000).toFixed(2) + " KB";
+  if (bytes >= 1024000000) {
+    bytes = (bytes / 1024000000).toFixed(2) + " GB";
+  } else if (bytes >= 1024000) {
+    bytes = (bytes / 1024000).toFixed(2) + " MB";
+  } else if (bytes >= 1024) {
+    bytes = (bytes / 1024).toFixed(2) + " KB";
   } else if (bytes > 1) {
     bytes = bytes + " bytes";
   } else if (bytes == 1) {
